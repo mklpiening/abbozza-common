@@ -18,6 +18,8 @@
  */
 package de.uos.inf.did.abbozza.monitor.clacks;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  *
  * @author michael
@@ -31,7 +33,7 @@ public class ClacksPacketParser {
     }
 
     public void addBytes(byte[] bytes) {
-        unprocessed.append(new String(bytes));
+        unprocessed.append(new String(bytes, StandardCharsets.ISO_8859_1));
     }
     
 
